@@ -1,0 +1,158 @@
+@import '../utils/variables';
+
+.footer {
+    display: flex;
+    background-color: $baner;
+    color: $white;
+    height: 252px;
+
+    &__beginning {
+        @include logo($blue);
+        display: inline-block;
+        padding-top: 0;
+        margin-top: 0;
+        margin: 50px 120px 8px 110px;
+    }
+    
+    &__information {
+        display:flex;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+        margin: 0px 0 0px 100px;
+    }
+    
+    &__contact {
+        font-weight: 400; 
+        font-size: 14px;
+        line-height: 24px; 
+        letter-spacing: 0.03em;
+        color: $grayI;
+    }
+    
+    &__contact:hover {
+        color: $gray;
+    }
+    
+    &__icons{
+        margin: 60px 35px 35px 0;
+    }
+    
+    &__websites {
+        display: flex;
+    }
+    
+    &__icon{
+        @include iconsWeb($white);
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+    }
+    
+    &__icon:hover {
+        background-color: $blue;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.subscription {
+    margin: 70px;
+
+    &__text {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0px 334px 10px 0;
+    }
+    
+    &__email-input {
+        display: flex;
+        z-index: 1;
+    }
+    
+    &__email-in {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        width: 330px;
+        height: 50px;
+        padding: 10px;
+        color: rgba(255, 255, 255, 0.6);
+        background-color: transparent;
+        margin: 3px 10px 0 0;
+    }
+    
+    &__btn {
+        @include buttonBlue($blue, $white);
+        margin-right: 100px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        width: 170px;
+        height: 50px;
+        padding: 14px;
+    }
+    
+    &__btn:hover {
+        background: $blueF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+    
+    &__icon {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 768.98px) {
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-between;
+        height: 500px;
+    }
+    .footer__beginning {
+        margin-left: 130px;
+    }
+    .subscription{
+        margin: 40px 150px;
+    }
+    .subscription__text {
+        margin: 10px 90px
+    }
+    .subscription__email-input {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .subscription__email-in {
+        margin-bottom: 10px;
+        width: 450px;
+    }
+    .subscription__btn {
+        width: 200px;
+        margin-left: 85px;
+    }
+}
+
+@media (max-width: 480.98px) {
+    .footer {
+        width: 480px;
+        height: 603px;
+    }
+    .footer__beginning {
+        margin: 40px 0 0 140px;
+    }
+    .footer__information {
+        align-items: center;
+    }
+    .footer__icons{
+        margin: 20px 0 20px 120px;
+    }
+    .footer__websites {
+        margin-left: -35px;
+    }
+    .subscription  {
+        margin: 10px 0 20px -8px;
+    }
+}
+

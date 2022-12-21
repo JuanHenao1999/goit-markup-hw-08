@@ -1,0 +1,70 @@
+@import '../utils/variables';
+
+.panel {
+    display: flex;
+    padding: 230px;
+    right: 452px;
+    background: linear-gradient(310deg, #0000005d, #2f303a94), url("./images/portal.jpg");
+
+    &__title {
+        color: $white;
+        font-weight: 900;
+        font-size: 44px;
+        text-align: center;
+        line-height: 60px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        width: 696px;
+        margin: 0 auto;
+    }
+    
+    &__button  {
+        @include buttonBlue($blue, $white);
+        position:absolute;
+        width: 250px;
+        height: 50px;
+        left: 545px;
+        top: 460px;
+    }
+    
+    &__button:hover {
+        background: $blueF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
+}
+
+
+
+@media only screen and (max-width: 768.98px) {
+    .panel {
+        background: linear-gradient(310deg, #0000005d, #2f303a94), url("./images/portalTablet.jpg");
+        background-repeat: no-repeat;
+        background-size: 768px 480px;
+    }
+
+    .panel__title {
+        line-height: 40px;
+        font-size: 30px;
+        margin: -70px;
+    }
+    .panel__button {
+        left: 340px;
+        margin: -100px ;
+    }
+}
+
+@media (max-width: 480.98px) {
+    .panel {
+        width: 480px;
+        height: 200px;
+        background-size: 100% 100%;
+    }
+    .panel__title {
+        font-size: 25px;
+        margin: -80px -150px ;
+    }
+    .panel__button {
+        margin: -130px -225px;
+    }
+}

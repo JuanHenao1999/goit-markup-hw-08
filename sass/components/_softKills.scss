@@ -1,0 +1,50 @@
+@import '../utils/variables';
+
+.container {
+    display: flex;
+    padding: 75px ;
+    justify-content: center;
+    align-content: flex-start;
+
+    &__icon {
+        width: 270px;
+        height: 120px;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: $grayS;
+        margin-bottom: 15px;
+    }
+    
+    &__subtitle {
+        display: flex;
+        align-items: flex-start;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $black;
+    }
+    
+    &__text {
+        color: $gray;
+        font-size: 14px;
+        line-height: 30px;
+        width: 270px;
+    }
+}
+
+@media (max-width: 480.98px) {
+    .container__icon {
+        width: 420px;
+    }
+    .container__subtitle {
+        justify-content: center;
+    }
+    .container__text {
+        width: 420px;
+        font-size: 14px;
+    }
+}
+
+
+
